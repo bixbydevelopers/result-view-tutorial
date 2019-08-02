@@ -1,0 +1,61 @@
+structure (Pet) {
+  description (A pet)
+  property (name) {
+    type (Name)
+    min (Required) max (One)
+  }
+  property (image) {
+    type (viv.core.Text)
+    min (Required) max (One)
+    visibility (Private)
+  }
+  property (images) {
+    type (AdditionalImages)
+    min (Optional) max (Many)
+  }
+  property (bio) {
+    type (viv.core.Text)
+    min (Required) max (One)
+    visibility (Private)
+  }
+  property (species) {
+    type (Species)
+    min (Required) max (One)
+    visibility (Private)
+  }
+  property (gender) {
+    type (viv.core.Text)
+    min (Required) max (One)
+    visibility (Private)
+  }
+  property (height) {
+    type (viv.core.Decimal)
+    min (Required) max (One)
+    visibility (Private)
+  }
+  property (weight) {
+    type (viv.core.Decimal)
+    min (Required) max (One)
+    visibility (Private)
+  }
+  property (age) {
+    type (viv.core.Text)
+    min (Required) max (One)
+    visibility (Private)
+  }
+  property (interests) {
+    type (viv.core.Text)
+    min (Optional) max (Many)
+    visibility (Private)
+  }
+  property (link) {
+    type (viv.core.Text)
+    min (Optional) max (Many)
+    visibility (Private)
+  }
+  property (linkDescription) {
+    type (viv.core.Text)
+    min (Optional) max (Many)
+    visibility (Private)
+  }
+}

@@ -1,0 +1,7 @@
+enum (Species){
+  symbol (cat)
+  symbol (dog)
+  features{
+    transient
+  }
+}

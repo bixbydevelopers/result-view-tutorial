@@ -1,0 +1,5 @@
+train (t-tl5jd3xuy88q4l4erpsbrhmi0) {
+  utterance ("[g:FindPets] show me (dogs)[v:Species:dog]")
+  plan (Y2BmUC7ISaxML8ovzUvRK0otLs0piS/LTC2PLyktyS/KTMzRC0gtYdAgpMgtMy8FqLCYQZ2QyuCC1OTM1GIGJgZGIGYAkowMIADlAwA=)
+  last-modified (1563301413916)
+}

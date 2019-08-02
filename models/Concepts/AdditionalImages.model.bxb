@@ -1,0 +1,3 @@
+structure (AdditionalImages) {
+  extends (viv.core.BaseImage)
+}

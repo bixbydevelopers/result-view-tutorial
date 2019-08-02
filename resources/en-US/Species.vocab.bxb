@@ -1,0 +1,4 @@
+vocab(Species){
+  "cat" {"cat" "cats" "kitten" "kittens"}
+  "dog" {"dog" "dogs" "puppy" "puppies"}
+}

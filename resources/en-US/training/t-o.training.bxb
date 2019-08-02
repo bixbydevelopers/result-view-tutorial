@@ -1,0 +1,5 @@
+train (t-o4p2vkicitvu86miq4an7hcd6) {
+  utterance ("[g:FindPets] show me all your (cats)[v:Species:cat]")
+  plan (Y2BmUMjKz8stSMzTK0otLs0piS/LTC2PLyktyS/KTMzRC0gtYVDFq8ItMy8FqKqYQQWvsuCC1OTM1GIGJgZGIGYAkowMIADlAwA=)
+  last-modified (1563401384040)
+}

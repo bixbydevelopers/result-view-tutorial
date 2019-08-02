@@ -1,0 +1,7 @@
+hints {
+  uncategorized {
+    utterance (Show me a cat)
+    utterance (Show me all the pets)
+    utterance (Show me Moxie)
+  }
+}

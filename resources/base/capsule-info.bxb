@@ -1,0 +1,10 @@
+capsule-info {
+  display-name (Find a Pet)
+  developer-name (jonmpan)
+  icon-asset (/icons/logo-new.png)
+  description ("Find some pets in this cute capsule.")
+  search-keywords{
+    keyword (Pets)
+  }
+  dispatch-name (Find a pet)
+}

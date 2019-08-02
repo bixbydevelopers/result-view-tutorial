@@ -1,0 +1,5 @@
+train (t-qfws3op8l1d7c7wpgxi1zczds) {
+  utterance ("[g:FindPets] find (mr whiskers)[v:Name]")
+  plan (Y2BmUC7ISaxML8ovzUvRK0otLs0piS/LTC2PLyktyS/KTMzRC0gtYdAgpMgtMy8FqLCYQYWQSr/E3FQGJgZGIGYAkowMIADlAwA=)
+  last-modified (1563305013347)
+}

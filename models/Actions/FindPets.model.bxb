@@ -1,0 +1,15 @@
+action (FindPets) {
+  type (Search)
+  description (Finds a pet or all the pets or pets by species)
+  collect {
+    input (name) {
+      type (Name)
+      min (Optional) max (One)
+    }
+    input (species) {
+      type (Species)
+      min (Optional) max (One)
+    }
+  }
+  output (Pet)
+}
