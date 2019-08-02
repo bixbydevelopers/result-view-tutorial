@@ -1,0 +1,29 @@
+dialog (Result) {
+  match: Pet(pet){
+    from-output:FindPets(action)
+  }
+  
+  if(size(pet)>1){
+    // dialog for if the user asks for a specific species.
+    if(exists(action.species)){
+      choose (Random){
+        template ("Here are #{size(pet)} adorable #{value(action.species)}s.")
+        template ("I found #{size(pet)} #{value(action.species)}s that need some cuddles.")
+      }
+    } else {
+      choose (Random){
+        template ("Here are #{size(pet)} adorable pets.")
+        template ("I found #{size(pet)} pets that need some cuddles.")
+      }
+    }
+  } else {
+    choose (Random){
+      template ("Meet #{title(pet.name)}."){
+        speech ("Meet #{title(pet.name)}. #{value(pet.bio)}")
+      }
+      template ("This is #{title(pet.name)}. #{value(pet.bio)}"){
+        speech ("This is #{title(pet.name)}.")
+      }
+    }
+  }
+}

@@ -1,0 +1,191 @@
+layout-macro-def (pet-details){
+  params{
+    param (pet){
+      type (Pet)
+      min (Required)
+      max (One)
+    }
+  }
+
+  content{
+    section{
+      content{
+        // the pet's image or images
+        if (exists(pet.images)){
+          image-carousel{
+            image-background-color (Transparent)
+            images (pet.images)
+          }
+        } else {
+          image{
+            aspect-ratio(4:3)
+            url("#{value(pet.image)}")
+          }
+        }
+        // the pet's name and species icon
+        hbox{
+          content{
+            vbox{
+              content{
+                text{
+                  value ("#{upper(pet.name)}")
+                  style (Title_S)
+                }
+              }
+            }
+            vbox{
+              content{
+                single-line{
+                  image{
+                    shape (Circle)
+                    style (Title_S)
+                    url ("/icons/#{value(pet.species)}-icon.png")
+                  }
+                }                
+              }
+            }
+          }
+        }
+        divider
+        // the pet's stats; height, weight, age, and gender
+        hbox{
+          content{
+            vbox{
+              halign (Start)
+              content{
+                text{
+                  value ("Height:")
+                  style (Detail_M_Soft)
+                }
+                text{
+                  value ("#{value(pet.height)}")
+                  style (Detail_L)
+                }
+              }
+            }
+            vbox{
+              content{
+                text{
+                  value ("Weight:")
+                  style (Detail_M_Soft)
+                }
+                text{
+                  value ("#{value(pet.weight)}")
+                  style (Detail_L)
+                }
+              }
+            }
+            vbox{
+              content{
+                text{
+                  value ("Age:")
+                  style (Detail_M_Soft)
+                }
+                text{
+                  value ("#{value(pet.age)}")
+                  style (Detail_L)
+                }
+              }
+            }
+            vbox{
+              halign (End)
+              content{
+                text{
+                  value ("Gender:")
+                  style (Detail_M_Soft)
+                }
+                text{
+                  value ("#{value(pet.gender)}")
+                  style (Detail_L)
+                }
+              }
+            }
+          }
+        }
+        divider
+        spacer
+        // the pet's biography section
+        paragraph{
+          value("Biography:")
+          style(Detail_L_Soft)
+        }
+        paragraph{
+          value("#{title(pet.bio)}")
+          style(Detail_L)
+        }
+        // the puchout attribution-link
+        if(exists(pet.link)){
+          attribution-link{
+            label{
+              if(exists(pet.linkDescription)){
+                template("#{value(pet.linkDescription)}")
+              }
+            }
+            url("#{value(pet.link)}")
+          }
+        }
+        // the interests list
+        if(exists(pet.interests)){
+          spacer
+          divider
+          spacer
+          single-line{
+            text{
+              value("Interests:")
+              style(Detail_L_Soft)
+            }
+          }
+          partitioned{
+            content{
+              for-each (pet.interests){
+                as(interest){
+                  single-line{
+                    text{
+                      value("#{title(interest)}")
+                      style(Detail_L)
+                    }
+                  }
+                }
+              }
+            }
+          }
+          spacer
+        }
+        divider
+        // the card that you can click on
+        cell-card{
+          slot1{
+            image{
+              url (/icons/logo-new.png)
+              background-color (Transparent)
+              shape (Circle)
+            }
+          }
+          slot2{
+            content{
+              order (SecondaryPrimary)
+              primary{
+                template ("Show me more #{value(pet.species)}s!")
+              }
+              secondary{
+                template (Click Me)
+              }
+            }
+          }
+          on-click{
+            intent{
+              goal: FindPets
+              value: $expr(pet.species)
+            }
+          }
+        }
+        spacer
+        // legal text at the bottom
+        paragraph{
+          value ("Animals similar to these are always looking for a home at your local animal shelter. Although this is just a demo capsule, please consider donating to a local shelter and/or adopting a pet if you want to be unconditionally loved by an animal that just needs a warm family to call home.\n\nSincerely,\nJon P.")
+          style (Legal)
+        }
+      }
+    }
+  }
+}
