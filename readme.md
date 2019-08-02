@@ -32,6 +32,7 @@ After going through the tutorial, your capsule will look like this, which also m
 
 ### Guides & Best Practices
 
+- [Bixby Result View UI Documentation](https://bixbydevelopers.com/dev/docs/reference/type/layout.content.section.content)
 - [Quick Start Guide](https://bixbydevelopers.com/dev/docs/get-started/quick-start) - Build your first capsule
 - [Design Guides](https://bixbydevelopers.com/dev/docs/dev-guide/design-guides) - Best practices for designing your capsules
 - [Developer Guides](https://bixbydevelopers.com/dev/docs/dev-guide/developers) - Guides that take you from design and modeling all the way through deployment of your capsules
