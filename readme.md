@@ -6,9 +6,9 @@
 
 ## Overview
 
-This tutorial capsule is designed to demonstrate how to use result-views, both with a list and a details page. This capsule goes with this [Youtube tutorial video](https://youtu.be/eX2-kRkokMI):
+This tutorial capsule is designed to demonstrate how to use result-views, both with a list and a details page. This capsule goes with this [Youtube tutorial video](https://youtu.be/2AjN_8y2I1U):
 
-https://youtu.be/eX2-kRkokMI
+https://youtu.be/2AjN_8y2I1U
 
 The `master` branch of this repository matches the code at the beginning of the video. If you would like to code along with the video, download this code from the master branch and put it inside Bixby Studio.
 
