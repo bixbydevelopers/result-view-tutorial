@@ -10,17 +10,10 @@ layout-macro-def (pet-details){
   content{
     section{
       content{
-        // the pet's image or images
-        if (exists(pet.images)){
-          image-carousel{
-            image-background-color (Transparent)
-            images (pet.images)
-          }
-        } else {
-          image{
-            aspect-ratio(4:3)
-            url("#{value(pet.image)}")
-          }
+        // the pet's image\
+        image{
+          aspect-ratio(4:3)
+          url("#{value(pet.image)}")
         }
         // the pet's name and species icon
         hbox{
@@ -135,17 +128,12 @@ layout-macro-def (pet-details){
               style(Detail_L_Soft)
             }
           }
-          partitioned{
-            content{
-              for-each (pet.interests){
-                as(interest){
-                  single-line{
-                    text{
-                      value("#{title(interest)}")
-                      style(Detail_L)
-                    }
-                  }
-                }
+          for-each (pet.interests){
+            as (interest){
+              divider
+              paragraph{
+                value("#{title(interest)}")
+                style(Detail_L)
               }
             }
           }
