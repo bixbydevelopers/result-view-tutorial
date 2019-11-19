@@ -1,7 +1,7 @@
 hints {
   uncategorized {
-    utterance (Show me a cat)
-    utterance (Show me all the pets)
-    utterance (Show me Moxie)
+    hint (With Find a pet show me a cat)
+    hint (Using Find a pet show me all the pets)
+    hint (Ask Find a pet to show me Moxie)
   }
 }
