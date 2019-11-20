@@ -5,7 +5,7 @@ structure (Pet) {
     min (Required) max (One)
   }
   property (image) {
-    type (viv.core.Text)
+    type (core.Text)
     min (Required) max (One)
     visibility (Private)
   }
@@ -14,7 +14,7 @@ structure (Pet) {
     min (Optional) max (Many)
   }
   property (bio) {
-    type (viv.core.Text)
+    type (core.Text)
     min (Required) max (One)
     visibility (Private)
   }
@@ -24,37 +24,47 @@ structure (Pet) {
     visibility (Private)
   }
   property (gender) {
-    type (viv.core.Text)
+    type (core.Text)
     min (Required) max (One)
     visibility (Private)
   }
   property (height) {
-    type (viv.core.Decimal)
+    type (core.Decimal)
     min (Required) max (One)
     visibility (Private)
   }
   property (weight) {
-    type (viv.core.Decimal)
+    type (core.Decimal)
     min (Required) max (One)
     visibility (Private)
   }
   property (age) {
-    type (viv.core.Text)
+    type (core.Text)
     min (Required) max (One)
     visibility (Private)
   }
   property (interests) {
-    type (viv.core.Text)
+    type (core.Text)
     min (Optional) max (Many)
     visibility (Private)
   }
   property (link) {
-    type (viv.core.Text)
+    type (core.Text)
     min (Optional) max (Many)
     visibility (Private)
   }
   property (linkDescription) {
-    type (viv.core.Text)
+    type (core.Text)
+    min (Optional) max (Many)
+    visibility (Private)
+  }
+  property (rating) {
+    type (core.Decimal)
+    min (Optional) max (Many)
+    visibility (Private)
+  }
+  property (ratings) {
+    type (core.Integer)
     min (Optional) max (Many)
     visibility (Private)
   }

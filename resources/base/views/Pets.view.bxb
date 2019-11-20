@@ -1,26 +1,42 @@
 result-view{
-  match: Pet (pets)
-
-  render{
-    // this is the list view when findPets finds more than 1 pet
-    if (size(pets) > 1){
-      list-of (pets){
-        where-each (pet){
-          layout-macro (pet-summary){
-            param (pet){
-              expression (pet)
+	match: Pet (pets)
+	
+	render{
+		// this is the list view when findPets finds more than 1 pet
+		if (size(pets) > 1){
+			list-of (pets){
+        highlights{
+          select (pick){
+            label{
+              template ("The Purrfect Pet")
+            }
+            layout-macro (best-pet){
+              param (pet){
+                expression (pick)
+              }
             }
           }
         }
-      }      
-    }
-    // this is the detailed view on a pet when you've clicked on a specific pet or if Bixby returns just 1 pet
-    else-if (size(pets) == 1){
-      layout-macro (pet-details){
-        param (pet){
-          expression (pets)
-        }
-      }  
-    }
-  }
+				where-each (pet){
+					layout-macro (pet-summary){
+						param (pet){
+							expression (pet)
+						}
+					}
+				}
+			}
+		}
+		// this is the detailed view on a pet when you've clicked on a specific pet or if Bixby returns just 1 pet
+		else-if (size(pets) == 1){
+			layout-macro (pet-details){
+				param (pet){
+					expression (pets)
+				}
+			}
+		}
+	}
+	conversation-drivers{
+		conversation-driver("Moxie")
+		conversation-driver("All Pets")
+	}
 }

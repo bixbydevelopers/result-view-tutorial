@@ -6,11 +6,20 @@ capsule {
     target (bixby-mobile-en-US)
   }
   runtime-flags {
+    use-input-views-for-selection-list-detail
     modern-default-view-behavior
     no-filtering-with-validation
     concepts-inherit-super-type-features
     modern-prompt-rejection
     support-halt-effect-in-computed-inputs
     allow-dialogs-on-detail-pages
+  }
+  capsule-imports{
+    import (viv.core){
+      as (core)
+    }
+  }
+  store-sections{
+    section (GamesAndFun)
   }
 }

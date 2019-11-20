@@ -1,0 +1,85 @@
+layout-macro-def (best-pet){
+	params{
+		param (pet){
+			type (Pet)
+			min (Required)
+			max (One)
+		}
+	}
+	
+	content{
+		compound-card{
+			content{
+				// image-card{
+				// 	text-position (Overlay)
+				// 	image-url ("[#{value(pet.image)}]")
+				// 	aspect-ratio (1:1)
+				// 	column-size (One)
+				// 	image-object-fit (Cover)
+				// 	image-object-position (Center)
+				// 	title-area{
+				// 		slot1{
+				// 			single-line{
+				// 				text("#{upper(pet.name)}")
+				// 			}
+				// 		}
+				// 		slot2{
+				// 			single-line{
+				// 				text("Species: ")
+				// 				spacer
+				// 				image{
+				// 					url("/icons/#{value(pet.species)}-icon.png")
+				// 				}
+				// 			}
+				// 		}
+				// 	}
+				// }
+
+				// single-line{
+				// 	text{
+				// 		value("The Purrfect Pet")
+				// 		style(Title_XS)
+				// 	}
+				// }
+				image-card{
+					text-position (Overlay)
+					image-url ("[#{value(pet.image)}]")
+					aspect-ratio (1:1)
+					column-size (One)
+					image-object-fit (Cover)
+					image-object-position (Center)
+					title-area{
+						slot1{single-line{text(" ")}}
+					}
+				}
+				hbox{
+					content{
+						vbox{
+							content{
+								text{
+									value ("#{upper(pet.name)}")
+									style (Title_S)
+								}
+							}
+						}
+						vbox{
+							content{
+								single-line{
+									image{
+										shape (Circle)
+										style (Title_S)
+										url ("/icons/#{value(pet.species)}-icon.png")
+									}
+								}
+							}
+						}
+					}
+				}
+				paragraph{
+					value("#{value(pet.bio)}")
+					style(Detail_M_Soft)
+				}
+			}
+		}
+	}
+}
