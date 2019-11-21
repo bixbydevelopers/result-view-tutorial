@@ -5,18 +5,18 @@ result-view{
 		// this is the list view when findPets finds more than 1 pet
 		if (size(pets) > 1){
 			list-of (pets){
-        highlights{
-          select (pick){
-            label{
-              template ("The Purrfect Pet")
-            }
-            layout-macro (best-pet){
-              param (pet){
-                expression (pick)
-              }
-            }
-          }
-        }
+        // highlights{
+        //   select (pick){
+        //     label{
+        //       template ("The Purrfect Pet")
+        //     }
+        //     layout-macro (best-pet){
+        //       param (pet){
+        //         expression (pick)
+        //       }
+        //     }
+        //   }
+        // }
 				where-each (pet){
 					layout-macro (pet-summary){
 						param (pet){

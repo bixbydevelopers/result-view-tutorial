@@ -35,16 +35,10 @@ layout-macro-def (best-pet){
 				// 	}
 				// }
 
-				// single-line{
-				// 	text{
-				// 		value("The Purrfect Pet")
-				// 		style(Title_XS)
-				// 	}
-				// }
 				image-card{
 					text-position (Overlay)
 					image-url ("[#{value(pet.image)}]")
-					aspect-ratio (1:1)
+					aspect-ratio (4:3)
 					column-size (One)
 					image-object-fit (Cover)
 					image-object-position (Center)

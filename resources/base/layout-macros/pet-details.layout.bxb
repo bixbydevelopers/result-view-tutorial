@@ -150,7 +150,6 @@ layout-macro-def (pet-details){
 					}
 					for-each (pet.interests){
 						as (interest){
-							// divider
 							paragraph{
 								value("#{title(interest)}")
 								style(Detail_L)
@@ -161,9 +160,7 @@ layout-macro-def (pet-details){
 					divider
 					spacer
 				}
-				// divider
-				// the card that you can click on
-
+				// Demonstration of cell-card with the on-click attribute
 				cell-card{
 					slot1{
 						image{
