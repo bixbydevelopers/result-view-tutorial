@@ -21,8 +21,8 @@ dialog (Result) {
       template ("Meet #{title(pet.name)}."){
         speech ("Meet #{title(pet.name)}. #{value(pet.bio)}")
       }
-      template ("This is #{title(pet.name)}. #{value(pet.bio)}"){
-        speech ("This is #{title(pet.name)}.")
+      template ("This is #{title(pet.name)}."){
+        speech ("This is #{title(pet.name)}. #{value(pet.bio)}")
       }
     }
   }
