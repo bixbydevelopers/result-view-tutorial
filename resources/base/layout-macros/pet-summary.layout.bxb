@@ -36,14 +36,14 @@ layout-macro-def (pet-summary){
 							}
 						}
 					}
-					// slot3{
-					// 	single-line{
-					// 		text{
-					// 			value("#{value(pet.bio)}")
-					// 			style(Detail_M_Soft)
-					// 		}
-					// 	}
-					// }
+					slot3{
+						single-line{
+							text{
+								value("#{value(pet.bio)}")
+								style(Detail_M_Soft)
+							}
+						}
+					}
 				}
 			}
 		}

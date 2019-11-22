@@ -2,6 +2,11 @@ capsule {
   id (example.result_view_tutorial)
   version (0.1.0)
   format (3)
+  store-countries{
+    only{
+      allow (US)
+    }
+  }
   targets {
     target (bixby-mobile-en-US)
   }
