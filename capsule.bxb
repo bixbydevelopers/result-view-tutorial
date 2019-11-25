@@ -17,4 +17,7 @@ capsule {
   store-sections{
     section (EducationAndReference)
   }
+  store-countries {
+    all
+  }
 }
