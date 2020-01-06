@@ -1,20 +1,19 @@
 capsule {
-  id (example.result_view_tutorial)
-  version (0.1.0)
-  format (3)
-  targets {
-    target (bixby-mobile-en-US)
-  }
-  runtime-flags {
-    use-input-views-for-selection-list-detail
-    modern-default-view-behavior
-    no-filtering-with-validation
-    concepts-inherit-super-type-features
-    modern-prompt-rejection
-    support-halt-effect-in-computed-inputs
-    allow-dialogs-on-detail-pages
-  }
-  store-sections{
-    section (EducationAndReference)
-  }
+	id (example.result_view_tutorial)
+	version (0.1.0)
+	format (3)
+	targets {
+		target (bixby-mobile-en-US)
+	}
+	runtime-version (2) {
+		overrides {
+			allow-dialogs-on-detail-pages (true)
+		}
+	}
+	store-sections{
+		section (EducationAndReference)
+	}
+	store-countries {
+		all
+	}
 }
