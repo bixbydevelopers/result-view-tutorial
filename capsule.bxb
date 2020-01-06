@@ -5,14 +5,10 @@ capsule {
   targets {
     target (bixby-mobile-en-US)
   }
-  runtime-flags {
-    use-input-views-for-selection-list-detail
-    modern-default-view-behavior
-    no-filtering-with-validation
-    concepts-inherit-super-type-features
-    modern-prompt-rejection
-    support-halt-effect-in-computed-inputs
-    allow-dialogs-on-detail-pages
+  runtime-version (2) {
+    overrides {
+      allow-dialogs-on-detail-pages (true)
+    }
   }
   store-sections{
     section (EducationAndReference)
